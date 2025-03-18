@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List with Categories</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>To Do List</h1>
+
+        <form id="todo-form">
+            <input type="text" id="todo-input" placeholder="Add a new task..." />
+            <div class="dropdown">
+                <button type="button" onclick="toggleDropdown()" class="dropbtn">Select Task Type</button>
+                <div id="taskDropdown" class="dropdown-content">
+                    <p  onclick="setTaskType('Homework')">Homework</p>
+                    <p  onclick="setTaskType('Cleaner')">Cleaner</p>
+                    <p  onclick="setTaskType('Fix')">Fix</p>
+                    <p  onclick="setTaskType('Office')">Office</p>
+                </div>
+            </div>
+            <button type="submit">Add</button>
+        </form>
+
+        <ul id="todo-list"></ul>
+    </div>
+
+</body>
+</html>
